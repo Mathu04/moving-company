@@ -66,6 +66,101 @@
 .icon-box i {
   font-size: 22px;
 }
+/* Dashboard Card Base */
+.dashboard-card {
+  padding: 20px;
+  border-radius: 14px;
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.dashboard-card h6 {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.dashboard-card h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Icon box */
+.icon-box {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 10px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box i {
+  font-size: 22px;
+}
+
+/* ===== MOBILE (max-width: 576px) ===== */
+@media (max-width: 576px) {
+  .dashboard-card {
+    padding: 15px;
+  }
+
+  .dashboard-card h3 {
+    font-size: 22px;
+  }
+
+  .dashboard-card h6 {
+    font-size: 13px;
+  }
+
+  .icon-box {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-box i {
+    font-size: 18px;
+  }
+
+  #dashboard h4 {
+    font-size: 18px;
+  }
+
+  #dashboard p {
+    font-size: 14px;
+  }
+}
+
+/* ===== TABLET (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  .dashboard-card h3 {
+    font-size: 24px;
+  }
+
+  .dashboard-card {
+    margin-bottom: 10px;
+  }
+}
+
+/* ===== LARGE SCREENS (min-width: 1200px) ===== */
+@media (min-width: 1200px) {
+  .dashboard-card {
+    padding: 25px;
+  }
+
+  .dashboard-card h3 {
+    font-size: 32px;
+  }
+}
 
 /* Dark mode support */
 [data-theme="dark"] .dashboard-card {
@@ -186,6 +281,117 @@
     </div>
 
   </div>
+  <!-- Extra Dashboard Details -->
+<div class="container mt-5">
+
+  <div class="row g-4">
+
+    <!-- Move Details -->
+    <div class="col-lg-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="fw-bold mb-3">📍 Current Move Details</h5>
+          <p><strong>Move ID:</strong> AZ-1023</p>
+          <p><strong>Pickup Location:</strong> New York, NY</p>
+          <p><strong>Drop Location:</strong> Los Angeles, CA</p>
+          <p><strong>Move Date:</strong> 20 Sep 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Move Status -->
+    <div class="col-lg-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="fw-bold mb-3">🚚 Move Status</h5>
+
+          <div class="progress mb-3" style="height: 10px;">
+            <div class="progress-bar bg-success" style="width: 60%;"></div>
+          </div>
+
+          <ul class="list-unstyled mb-0">
+            <li>✔ Packing Completed</li>
+            <li>🚛 In Transit</li>
+            <li>⏳ Delivery Pending</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Recent Moves -->
+  <div class="card shadow-sm mt-4">
+    <div class="card-body">
+      <h5 class="fw-bold mb-3">📋 Recent Moves</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Move ID</th>
+              <th>Date</th>
+              <th>Items</th>
+              <th>Vehicle</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AZ-1023</td>
+              <td>20 Sep 2025</td>
+              <td>18</td>
+              <td>Truck</td>
+              <td><span class="badge bg-warning">In Transit</span></td>
+            </tr>
+            <tr>
+              <td>AZ-1019</td>
+              <td>10 Sep 2025</td>
+              <td>12</td>
+              <td>Mini Truck</td>
+              <td><span class="badge bg-success">Completed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment + Support -->
+  <div class="row g-4 mt-1">
+
+    <!-- Payment Summary -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="fw-bold mb-3">💰 Payment Summary</h5>
+          <p>Total Amount: <strong>$1,500</strong></p>
+          <p>Paid: <strong class="text-success">$1,200</strong></p>
+          <p>Due: <strong class="text-danger">$300</strong></p>
+          <br>
+          <button class="btn btn-success btn-sm">Pay Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Support -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="fw-bold mb-3">📞 Need Help?</h5>
+          <p><i class="fa fa-phone"></i> +1 800 123 456</p>
+          <p><i class="fa fa-envelope"></i> support@atozpackers.com</p>
+          <br>
+          <button class="btn btn-outline-primary btn-sm">
+            Chat with Support
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
 </div>
 
 
