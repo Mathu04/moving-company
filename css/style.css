@@ -576,6 +576,43 @@ body {
 ;
   border: none;
 }
+/* Dark Mode Form */
+[data-theme="dark"] .form-control{
+    background-color: #0b2440;
+    color: #ffffff;
+    border: 1px solid #2e4a73;
+}
+
+/* Placeholder color */
+[data-theme="dark"] .form-control::placeholder{
+    color: #cfd8e3;
+    opacity: 1;
+}
+
+/* Floating label color */
+[data-theme="dark"] .form-floating label{
+    color: #cfd8e3;
+}
+
+/* Input focus */
+[data-theme="dark"] .form-control:focus{
+    background-color: #0b2440;
+    color: #ffffff;
+    border-color: #4da3ff;
+    box-shadow: none;
+}
+
+/* Textarea fix */
+[data-theme="dark"] textarea.form-control{
+    background-color: #0b2440;
+    color: #ffffff;
+}
+
+/* Button optional */
+[data-theme="dark"] .btn-primary{
+    background-color: #FF3E41;
+   
+}
 
 /* Dropdown item text color */
 [data-theme="dark"] .navbar .dropdown-item {
